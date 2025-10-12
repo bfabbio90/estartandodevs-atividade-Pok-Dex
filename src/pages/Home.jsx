@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getPokemons, getPokemonByName  } from "../services/api";
-import PokemonCard from "../components/PokemonCard";
+import PokemonCard from "../components/PokemonCard/PokemonCard";
 
 export default function Home() {
   const [pokemons, setPokemons] = useState([]);

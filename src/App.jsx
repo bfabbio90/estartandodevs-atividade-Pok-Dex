@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import PokemonDetails from "./pages/PokemonDetails";
+import DetalhesPokemon from "./pages/DetalhesPokemon";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/pokemon/:name" element={<PokemonDetails />} />
+        <Route path="/pokemon/:name" element={<DetalhesPokemon />} />
       </Routes>
     </BrowserRouter>
   );
