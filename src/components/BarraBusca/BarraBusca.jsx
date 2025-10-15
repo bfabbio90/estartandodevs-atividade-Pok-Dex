@@ -1,4 +1,4 @@
-export default function SearchBar({ search, setSearch, handleSearch }) {
+export default function BarraBusca({ search, setSearch, handleSearch }) {
   return (
     <form onSubmit={handleSearch} className="search-bar">
       <input
