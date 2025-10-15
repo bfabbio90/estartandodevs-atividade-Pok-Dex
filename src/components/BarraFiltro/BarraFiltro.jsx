@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { getPokemonByType } from "../services/api";
+import { getPokemonsByType } from "../../services/api";
 
-export default function FilterType({ setPokemons, setPage }) {
+export default function BarraFiltro({ setPokemons, setPage }) {
   const [types, setTypes] = useState([]);
   const [selectedType, setSelectedType] = useState("");
 
@@ -20,7 +20,7 @@ export default function FilterType({ setPokemons, setPage }) {
       return;
     }
 
-    const pokemonsByType = await getPokemonByType(type);
+    const pokemonsByType = await getPokemonsByType(type);
     setPokemons(pokemonsByType);
   };
 

@@ -16,5 +16,14 @@ export const getPokemonByName = async (name) => {
 
 export const getPokemonsByType = async (type) => {
   const res = await api.get(`type/${type}`);
-  return res.data;
+  const pokemonList = res.data.pokemon.slice(0, 20).map(p => p.pokemon);
+
+  const detailedPokemons = await Promise.all(
+    pokemonList.map(async (p) => {
+      const response = await api.get(p.url);
+      return response.data;
+    })
+  );
+
+  return detailedPokemons;
 };
