@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { getPokemonsByType } from "../../services/api";
+import "./BarraFiltro.css";
 
-export default function BarraFiltro({ setPokemons, setPage }) {
+export default function BarraFiltro({ handleFilter }) {
   const [types, setTypes] = useState([]);
   const [selectedType, setSelectedType] = useState("");
 
@@ -11,23 +11,21 @@ export default function BarraFiltro({ setPokemons, setPage }) {
       .then((data) => setTypes(data.results));
   }, []);
 
-  const handleFilter = async (e) => {
-    const type = e.target.value;
-    setSelectedType(type);
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setSelectedType(value);
+    handleFilter(value); 
+  };
 
-    if (!type) {
-      setPage(0);
-      return;
-    }
-
-    const pokemonsByType = await getPokemonsByType(type);
-    setPokemons(pokemonsByType);
+  const handleClear = () => {
+    setSelectedType("");
+    handleFilter("");
   };
 
   return (
     <div className="filter-type">
       <label htmlFor="type">Filtrar por tipo:</label>
-      <select id="type" value={selectedType} onChange={handleFilter}>
+      <select id="type" value={selectedType} onChange={handleChange}>
         <option value="">Todos</option>
         {types.map((t) => (
           <option key={t.name} value={t.name}>
@@ -35,6 +33,11 @@ export default function BarraFiltro({ setPokemons, setPage }) {
           </option>
         ))}
       </select>
+      {selectedType && (
+        <button type="button" className="clear-btn" onClick={handleClear} title="Limpar filtro">
+          Limpar
+        </button>
+      )}
     </div>
   );
 }
