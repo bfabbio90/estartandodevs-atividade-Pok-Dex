@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getPokemonByName } from "../services/api";
+import "./DetalhesPokemon.css";
 
 export default function DetalhesPokemon() {
   const { name } = useParams();
@@ -17,7 +18,7 @@ export default function DetalhesPokemon() {
   if (!pokemon) return <p>Carregando...</p>;
 
   return (
-    <div className="p-4 text-center">
+    <div className="detalhes-container">
       <Link to="/">Voltar</Link>
       <h1>{pokemon.name}</h1>
       <img src={pokemon.sprites.front_default} alt={pokemon.name} />

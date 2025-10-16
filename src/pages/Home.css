@@ -6,8 +6,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* auto-fit garante espaço mínimo */
-  gap: 20px; /* espaço real entre os cards */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 20px; 
   justify-items: center;
 }
 
@@ -39,7 +39,6 @@
   cursor: not-allowed;
 }
 
-/* Responsivo */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
