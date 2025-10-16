@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getPokemonsByType } from "../../services/api";
+import "./BarraFiltro.css";
 
 export default function BarraFiltro({ setPokemons, setPage }) {
   const [types, setTypes] = useState([]);
