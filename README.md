@@ -16,30 +16,31 @@ ESLint: Ferramenta de linting para identificar e corrigir problemas no código J
 
 🔧 Instalação
 
-# Clone o repositório
+Clone o repositório
 
 ```bash
 git clone https://github.com/bfabbio90/estartandodevs-atividade-Pok-Dex.git
 ```
 
-# Navegue até o diretório do projeto
+Navegue até o diretório do projeto
 
 ```bash
 cd estartandodevs-atividade-Pok-Dex
 ```
 
-# Instale as dependências
+Instale as dependências
 ```bash
 npm install
 ```
 
-# Inicie o servidor de desenvolvimento
+Inicie o servidor de desenvolvimento
 ```bash
 npm run dev
 ```
 
 📁 Estrutura de Pastas
 
+```bash
 estartandodevs-atividade-Pok-Dex/
 ├── public/                # Arquivos públicos
 ├── src/                   # Código fonte
@@ -51,3 +52,4 @@ estartandodevs-atividade-Pok-Dex/
 ├── index.html             # HTML principal
 ├── package.json           # Dependências e scripts
 └── vite.config.js         # Configurações do Vite
+```
