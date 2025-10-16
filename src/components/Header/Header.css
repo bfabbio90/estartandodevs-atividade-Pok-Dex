@@ -3,8 +3,11 @@
   padding: 10px 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   position: sticky;
+  border-radius: 8px;
   top: 0;
   z-index: 100;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
 .header-container {
@@ -36,7 +39,8 @@
   color: #2a75bb; 
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
@@ -57,5 +61,9 @@
 
   .logo img {
     width: 100px;
+  }
+
+  .nav-link {
+    font-size: 16px; 
   }
 }
