@@ -53,3 +53,41 @@ estartandodevs-atividade-Pok-Dex/
 ├── package.json           # Dependências e scripts
 └── vite.config.js         # Configurações do Vite
 ```
+
+💡 Como Contribuir
+
+Faça um fork deste repositório.
+
+Crie uma nova branch para sua feature:
+
+```bash
+git checkout -b minha-feature
+```
+
+Faça alterações e commits significativos:
+
+```bash
+git commit -m "feat: adiciona nova funcionalidade"
+```
+
+Envie para sua branch:
+
+```bash
+git push origin minha-feature
+```
+
+Abra um Pull Request.
+
+Siga as boas práticas de código, nomenclatura e comentários.
+
+🧠 Aprendizados / Boas práticas
+
+Consumo de APIs REST com Axios
+
+Gerenciamento de estado com Hooks do React (useState, useEffect)
+
+Componentização de interface para reutilização e manutenção
+
+Layout responsivo com CSS Grid e Flexbox
+
+Padrões de código e linting com ESLint
